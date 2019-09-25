@@ -1,20 +1,23 @@
 console.log('worked');
 
-// синяя - 1 - 15_000 : 50
-// серебряная - 15_001 - 150_000 : 70
-// золотая - 150_001 : 100
+// за обычные покупки - 1%
+// повышенный кэшбэк - 5%
+// спец.предложения - 30%
 
-// Найти итоговое кол-во бонусов, с конкретной покупки
-const previousPurchases = 160000;
-const currentPurchase = 4000;
+const usualAmount = 1000;
+const highAmount = 2000;
+const specialAmount = 50000;
 
-let bonusesPerOneThousand;
-if (previousPurchases <= 15000) {
-    bonusesPerOneThousand = 50;
-} else if (previousPurchases <= 150000) {
-    bonusesPerOneThousand = 70;
-} else {
-    bonusesPerOneThousand = 100;
-}
+const usualPurchases = 0.01;
+const highCashback = 0.05;
+const specialOffer = 0.3;
 
-console.log(bonusesPerOneThousand);
+const maxCashback = 3000;
+
+const usualBonuses = usualAmount * usualPurchases;
+const highBonuses = highAmount * highCashback;
+const specialBonuses = specialAmount * specialOffer;
+
+console.log(usualBonuses);
+console.log(highBonuses);
+console.log(specialBonuses);
