@@ -18,6 +18,27 @@ const usualBonuses = usualAmount * usualPurchases;
 const highBonuses = highAmount * highCashback;
 const specialBonuses = specialAmount * specialOffer;
 
-console.log(usualBonuses);
-console.log(highBonuses);
-console.log(specialBonuses);
+let usualCashback;
+if (usualBonuses <= maxCashback) {
+    usualCashback = usualBonuses;
+} else {
+    usualBonuses = maxCashback;
+}
+
+let highCashback;
+if (highBonuses <= maxCashback) {
+    highCashback = highBonuses;
+} else {
+    highBonuses = maxCashback;
+}
+
+let specialCashback;
+if (specialBonuses <=maxCashback) {
+    specialCashback = specialBonuses;
+} else {
+    specialBonuses = maxCashback;
+}
+
+console.log(usualCashback);
+console.log(highCashback);
+console.log(specialCashback);
