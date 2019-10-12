@@ -21,15 +21,9 @@ const specialBonuses = specialAmount * specialOffer;
 const totalCashback = usualBonuses + highBonuses + specialBonuses;
 
 let totalAmountCashback;
-if (totalCashback >= 3000) {
-    totalAmountCashback = 3000
+if (totalCashback >= maxCashback) {
+    totalAmountCashback = maxCashback;
 };
-
-// console.log(usualBonuses);
-// console.log(highBonuses);
-// console.log(specialBonuses);
-
-// console.log(totalCashback);
 
 console.log(totalAmountCashback);
 
